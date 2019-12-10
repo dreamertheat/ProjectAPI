@@ -6,7 +6,7 @@ Featuring API(s):
 - PokeAPI
 - Pastebin
 - Noah
-- SYSTRAN.io
+- NASA
 
 Architecture:
 - MVVVM Layer Modularity
@@ -17,3 +17,4 @@ Libraries:
 - Room
 - Livedata
 - RxJava
+- NDK side by side
