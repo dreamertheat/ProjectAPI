@@ -15,3 +15,5 @@ Libraries:
 - Retrofit
 - Koin
 - Room
+- Livedata
+- RxJava
