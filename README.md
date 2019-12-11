@@ -7,6 +7,7 @@ Featuring API(s):
 - Pastebin
 - Noah
 - NASA
+- Magic the Gathering
 
 Architecture:
 - MVVVM Layer Modularity
@@ -17,4 +18,4 @@ Libraries:
 - Room
 - Livedata
 - RxJava
-- NDK side by side
+- NDK side by side (usually added to gitignore for security reasons. Not here though)
