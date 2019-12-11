@@ -6,6 +6,7 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.2.1"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "io.magicthegathering:kotlinsdk:$mtg_version"
 }
 
 sourceCompatibility = "7"

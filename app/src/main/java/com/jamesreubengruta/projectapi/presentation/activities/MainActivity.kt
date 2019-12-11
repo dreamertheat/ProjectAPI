@@ -1,10 +1,10 @@
-package com.jamesreubengruta.projectapi
+package com.jamesreubengruta.projectapi.presentation.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.constants.api.Keys
-import com.jamesreubengruta.projectapi.constants.tools.Math
 
 class MainActivity : AppCompatActivity() {
 
