@@ -1,11 +1,9 @@
 package com.jamesreubengruta.projectapi.constants.api
 
+import com.jamesreubengruta.constants.ApiKeys
+
 object Keys {
 
-    init {
-        System.loadLibrary("native-lib")
-    }
-
-    external fun api_key(): String
-   // external fun openweather_api_key(): String
+    fun getNasaAPIKey() = ApiKeys.getNASAApiKey();
+    fun getOpenWeatherAPIKey() = ApiKeys.getOpenweatherApiKey();
 }
