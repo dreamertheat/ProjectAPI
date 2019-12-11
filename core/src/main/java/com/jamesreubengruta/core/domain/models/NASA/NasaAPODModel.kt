@@ -2,7 +2,7 @@ package com.jamesreubengruta.core.domain.models.NASA
 
 
 import com.google.gson.annotations.SerializedName
-
+import java.io.Serializable
 
 
 data class NasaAPODModel(
@@ -22,4 +22,10 @@ data class NasaAPODModel(
     var title: String?, // Starlink Satellite Trails over Brazil
     @SerializedName("url")
     var url: String? // https://apod.nasa.gov/apod/image/1912/StarlinkTrails_Filter_1080.jpg
-)
+): Serializable{
+
+    companion object{
+        val EMPTY = NasaAPODModel("","","","","","","","")
+    }
+
+}
