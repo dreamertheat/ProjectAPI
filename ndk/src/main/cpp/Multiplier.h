@@ -1,0 +1,8 @@
+//
+// Created by dream on 12/12/2019.
+//
+
+#ifndef PROJECTAPI_MULTIPLIER_H
+#define PROJECTAPI_MULTIPLIER_H
+
+#endif //PROJECTAPI_MULTIPLIER_H

@@ -9,6 +9,6 @@ class NasaRepository(private val dataSource : NasaAPODDataSource, private val op
         suspend fun addData(data: NasaAPODModel)=dataSource.add(data)
         suspend fun getLatest(date:String)=dataSource.getLatest(date)
         suspend fun getList()=dataSource.getList()
-         fun get()=openData.get()
+        fun get()=openData.get()
         fun set(data: NasaAPODModel)=openData.set(data)
 }  //TODO:: wild error message appeared!  Go debugger!

@@ -4,7 +4,6 @@ package com.jamesreubengruta.core.domain.models.NASA
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 
-
 data class NasaAPODModel(
     @SerializedName("copyright")
     var copyright: String?, // Egon Filter

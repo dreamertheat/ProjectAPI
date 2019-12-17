@@ -5,6 +5,6 @@ import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 
 class AddNasaAPOD(private val repo:NasaRepository) {
 
-         suspend operator  fun  invoke (data:NasaAPODModel)=repo.addData(data)
+   suspend operator  fun  invoke (data:NasaAPODModel)=repo.addData(data)
 
 }

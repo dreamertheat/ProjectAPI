@@ -5,6 +5,6 @@ import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 
 class GetLatestNasaAPOD(private val repo:NasaRepository) {
 
-        suspend operator  fun  invoke(date:String)=repo.getLatest(date)
+    suspend operator  fun  invoke(date:String)=repo.getLatest(date)
         
 }
