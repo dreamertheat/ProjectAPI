@@ -1,30 +1,53 @@
 package com.jamesreubengruta.projectapi.presentation.activities
 
+import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.constants.api.Keys
+import com.jamesreubengruta.projectapi.presentation.viewmodels.BasicDataTransfer
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     var temp_obj: NasaAPODModel? = null
     var temp_bundle : Bundle? = null;
+
     override fun onCreate(sis: Bundle?) {
         super.onCreate(sis)
         setContentView(R.layout.activity_main)
 
-        try {
-            //Log.e("test", "${Keys.getNasaAPIKey()}")
-        }catch (e : Exception){
-           // Log.e("ERRORX","${e.stackTrace}")
+
+
+
+        val vm = ViewModelProvider.AndroidViewModelFactory(Application()).create(BasicDataTransfer::class.java)
+        vm.strings().observe(this, Observer {
+            it.forEach {
+                Log.e("content","$it")
+            }
         }
+
+
+        )
+
+
+
+
+
         if(sis!=null) {
             temp_obj ?: sis!!.getSerializable("obj")
         }
+
+        handleUI()
+
+    }
+
+    fun handleUI(){
         tv_greet.setOnClickListener {
             temp_obj = NasaAPODModel(title="mardok",url="mpme",explanation = "asd",copyright = "asda",
                 date = "asd sa", hdurl = "asd 220", mediaType = "as aasd", serviceVersion = "22")
@@ -33,17 +56,24 @@ class MainActivity : AppCompatActivity() {
             tv_greet.text = x!!.title.toString()
         }
 
+        b_txt.setOnClickListener {
+            trasnfer();
+        }
     }
 
 
     override fun onBackPressed() {
-        val bundle = Bundle();
-        bundle.putSerializable("obj",temp_obj)
-        temp_bundle = bundle;
-        onSaveInstanceState(temp_bundle!!)
-        super.onBackPressed()
+
     }
 
+    fun trasnfer(){
+        val vm = ViewModelProvider.AndroidViewModelFactory(Application()).create(BasicDataTransfer::class.java)
+        vm.goToSecam()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+    }
 
 
     override fun onStart() {

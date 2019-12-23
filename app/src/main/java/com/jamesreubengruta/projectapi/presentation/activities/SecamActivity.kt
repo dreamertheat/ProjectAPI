@@ -15,7 +15,7 @@ class SecamActivity : AppCompatActivity() {
 
     override fun onCreate(sis: Bundle?) {
         super.onCreate(sis)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.secam_act)
     }
 
 
