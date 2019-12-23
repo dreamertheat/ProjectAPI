@@ -1,4 +1,4 @@
-package com.jamesreubengruta.projectapi.presentation.activities
+package com.jamesreubengruta.projectapi.presentation.activities.login_profile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,7 +9,7 @@ import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.constants.api.Keys
 import kotlinx.android.synthetic.main.activity_main.*
 
-class SecamActivity : AppCompatActivity() {
+class Login_profile : AppCompatActivity() {
 
 
 

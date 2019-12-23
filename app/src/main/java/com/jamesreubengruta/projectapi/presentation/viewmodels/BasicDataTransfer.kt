@@ -1,14 +1,10 @@
 package com.jamesreubengruta.projectapi.presentation.viewmodels
 
-import android.app.Application
-import android.content.Context
 import android.content.Intent
-import android.os.Handler
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.jamesreubengruta.projectapi.presentation.activities.SecamActivity
+import com.jamesreubengruta.projectapi.presentation.activities.unused.SecamActivity
 
 class BasicDataTransfer(var c : android.app.Application) : AndroidViewModel(c) {
 
@@ -42,7 +38,8 @@ class BasicDataTransfer(var c : android.app.Application) : AndroidViewModel(c) {
     }
 
     fun goToSecam(){
-        val d = Intent(c,SecamActivity::class.java)
+        val d = Intent(c,
+            SecamActivity::class.java)
         c.startActivity(d)
     }
 

@@ -1,15 +1,13 @@
-package com.jamesreubengruta.projectapi.presentation.activities
+package com.jamesreubengruta.projectapi.presentation.activities.unused
 
 import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 import com.jamesreubengruta.projectapi.R
-import com.jamesreubengruta.projectapi.constants.api.Keys
 import com.jamesreubengruta.projectapi.presentation.viewmodels.BasicDataTransfer
 import kotlinx.android.synthetic.main.activity_main.*
 
