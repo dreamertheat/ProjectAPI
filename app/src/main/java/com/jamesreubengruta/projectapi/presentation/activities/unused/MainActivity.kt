@@ -9,7 +9,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.presentation.viewmodels.BasicDataTransfer
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.unused_activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(sis: Bundle?) {
         super.onCreate(sis)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.unused_activity_main)
 
 
 

@@ -19,7 +19,7 @@
 
         </activity>
 
-        <activity android:name=".presentation.login_profile.FragmentActivity" >
+        <activity android:name=".presentation.activities.login_profile.LoginProfile" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

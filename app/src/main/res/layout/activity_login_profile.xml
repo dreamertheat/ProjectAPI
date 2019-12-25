@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:weightSum="10"
-    tools:context=".presentation.activities.login_profile.Login_profile">
+    tools:context=".presentation.activities.login_profile.LoginProfile">
 
     <TextView
         android:layout_weight="1"
@@ -19,10 +19,11 @@
 
     <RelativeLayout
         android:id="@+id/rl_fragment"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:layout_weight="8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryDark"
         ></RelativeLayout>
 
 
