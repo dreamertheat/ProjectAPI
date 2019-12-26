@@ -12,17 +12,14 @@ class FragmentLoginVM(var c : android.app.Application, val lpx : LoginProfileX) 
 
 
 
-    private fun storeCreds(username:String, password: String):MutableLiveData<ArrayList<String>>{
+    private fun storeCreds(username:String, password: String):ArrayList<String>{
         var list = ArrayList<String>()
         list.add(username)
         list.add(password)
-
-        return MutableLiveData<ArrayList<String>>().also {
-            it.value = list
-        }
+        return list
     }
 
-    private var liveCreds : MutableLiveData<ArrayList<String>> = storeCreds("x","x")
+    private var liveCreds = MutableLiveData<ArrayList<String>>()
 
 
     fun getCreds() : LiveData<ArrayList<String>>{
@@ -30,9 +27,9 @@ class FragmentLoginVM(var c : android.app.Application, val lpx : LoginProfileX) 
     }
 
 
-    fun Login(username : String, password:String){
+    fun login(username : String, password:String){
         Log.e("$username","$password")
-        liveCreds = storeCreds(username,password)
+        liveCreds.value = storeCreds(username,password)
         goToProfile(username,password)
     }
 

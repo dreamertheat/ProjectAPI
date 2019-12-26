@@ -9,6 +9,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.presentation.activities.login_profile.LoginProfile
+import com.jamesreubengruta.projectapi.presentation.logic.LoginProfileX
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
 import kotlinx.android.synthetic.main.fragment_profile.*
@@ -22,8 +23,8 @@ class FragmentProfile : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         val vmf = FragmentLoginVMF(this.activity!!.application,(this.activity as LoginProfile))
-        vm = ViewModelProvider(this,vmf).get(FragmentLoginVM::class.java)
-
+        vm = ViewModelProvider(this.requireActivity(),vmf).get(FragmentLoginVM::class.java)
+        //vm = FragmentLoginVM(this.activity?.application!!,(this.activity as LoginProfile).getLpx())
         vm.getCreds().observe(this, Observer{ c->
             var temp : String = ""
             c.forEach {

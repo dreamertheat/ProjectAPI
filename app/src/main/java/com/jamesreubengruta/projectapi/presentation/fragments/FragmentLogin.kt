@@ -20,7 +20,7 @@ class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickL
         super.onActivityCreated(savedInstanceState)
         //vm = ViewModelProvider.AndroidViewModelFactory(this.activity!!.application).create(FragmentLoginVM::class.java)
         val vmf = FragmentLoginVMF(this.activity!!.application,lpx)
-        vm = ViewModelProvider(this, vmf).get(FragmentLoginVM::class.java)
+        vm = ViewModelProvider(this.requireActivity(), vmf).get(FragmentLoginVM::class.java)
         bt_login.setOnClickListener(this)
     }
 
@@ -34,7 +34,7 @@ class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickL
 
     override fun onClick(v: View?) {
         if(v==bt_login){
-            vm.Login(et_username.text.toString(),et_password.text.toString())
+            vm.login(et_username.text.toString(),et_password.text.toString())
 
         }
     }
