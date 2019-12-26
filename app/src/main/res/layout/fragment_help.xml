@@ -2,26 +2,24 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#024891"
-
+    android:background="#187b0b"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:weightSum="14"
-    tools:context=".presentation.fragments.FragmentProfile">
-
+    tools:context=".presentation.fragments.FragmentHelp">
 
     <TextView
-        android:layout_weight="2"
+        android:layout_weight="5"
         android:id="@+id/tv_message"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="35sp"
+        android:layout_gravity="bottom"
+        android:textSize="39sp"
         android:textColor="@color/colorAccent"
-        android:text="Authenticated"
-        android:gravity="center" />
+        android:text="Help"
+        android:gravity="bottom" />
 
 
 

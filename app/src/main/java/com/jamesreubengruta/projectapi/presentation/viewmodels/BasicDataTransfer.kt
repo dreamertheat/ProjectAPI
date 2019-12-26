@@ -26,6 +26,9 @@ class BasicDataTransfer(var c : android.app.Application) : AndroidViewModel(c) {
 
     }
 
+
+
+
     private val list : MutableLiveData<ArrayList<String>> by lazy {
         MutableLiveData<ArrayList<String>>().also {
             it.value=loadData()

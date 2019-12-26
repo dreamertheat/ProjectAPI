@@ -12,16 +12,14 @@ import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
 import kotlinx.android.synthetic.main.fragment_login.*
 
-class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickListener {
+class FragmentSettings() : Fragment() {
 
     private lateinit var vm : FragmentLoginVM
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         //vm = ViewModelProvider.AndroidViewModelFactory(this.activity!!.application).create(FragmentLoginVM::class.java)
-        val vmf = FragmentLoginVMF(this.activity!!.application,lpx)
-        vm = ViewModelProvider(this, vmf).get(FragmentLoginVM::class.java)
-        bt_login.setOnClickListener(this)
+
     }
 
     override fun onCreateView(
@@ -29,14 +27,9 @@ class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickL
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        return inflater.inflate(R.layout.fragment_settings, container, false)
     }
 
-    override fun onClick(v: View?) {
-        if(v==bt_login){
-            vm.Login(et_username.text.toString(),et_password.text.toString())
 
-        }
-    }
 
 }

@@ -11,13 +11,15 @@
     <TextView
         android:layout_weight="1"
         android:id="@+id/tv_message"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="ads"
+        android:background="#555555"
         android:gravity="top" />
 
     <RelativeLayout
+        android:background="#FF0000"
         android:id="@+id/rl_fragment"
         android:layout_gravity="center"
         android:gravity="center"
@@ -31,9 +33,11 @@
     <TextView
         android:layout_weight="1"
         android:id="@+id/tv_ads"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="ads"
+        android:background="#555555"
+
         android:layout_gravity="center"
         android:gravity="bottom" />
 
