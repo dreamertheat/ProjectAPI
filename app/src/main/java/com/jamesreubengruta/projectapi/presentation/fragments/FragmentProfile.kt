@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.presentation.activities.login_profile.LoginProfile
+import com.jamesreubengruta.projectapi.presentation.adapters.settingsAdapter
 import com.jamesreubengruta.projectapi.presentation.logic.LoginProfileX
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
@@ -32,8 +34,20 @@ class FragmentProfile : Fragment() {
             }
             tv_message.text = temp
         } )
+        recycler()
+    }
+
+    fun recycler(){
+
+        vm.getCreds().observe(this,Observer{
+            rv_list.adapter = settingsAdapter(it,this.requireContext())
+        })
+
+
+        rv_list.layoutManager = LinearLayoutManager(this.requireContext())
 
     }
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {

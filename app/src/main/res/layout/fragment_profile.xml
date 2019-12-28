@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:weightSum="14"
+    android:weightSum="11"
     tools:context=".presentation.fragments.FragmentProfile">
 
 
@@ -23,7 +23,12 @@
         android:text="Authenticated"
         android:gravity="center" />
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_weight="9"
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
 </LinearLayout>

@@ -22,6 +22,8 @@ class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickL
         val vmf = FragmentLoginVMF(this.activity!!.application,lpx)
         vm = ViewModelProvider(this.requireActivity(), vmf).get(FragmentLoginVM::class.java)
         bt_login.setOnClickListener(this)
+
+
     }
 
     override fun onCreateView(
@@ -40,3 +42,24 @@ class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickL
     }
 
 }
+
+//Half and whole
+//A A# B
+//B C C#
+//C C# D
+//D D# E
+//E F F#
+//F F# G
+//G G# A
+
+//tricky parts
+//D# E F
+//A# B C
+
+//major
+//A B C# D E F# G# A
+//B C D D# F G A A#
+//C D E F G A B C
+//D E F# G A B C C#
+//E F# G# A B C# D# E
+//F G A A# C D E F#
