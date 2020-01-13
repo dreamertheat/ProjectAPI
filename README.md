@@ -30,7 +30,7 @@ Libraries:
 
 
 
-Diagran I made to explain high to low level view of MVVM clean architecture
+''Diagran I made to explain high to low level view of MVVM clean architecture
 (click image for zoomed view)
 
 ![](https://raw.githubusercontent.com/dreamertheat/ProjectAPI/master/diagram/AndroidMVVM.svg?sanitize=true)
