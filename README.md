@@ -28,7 +28,7 @@ Libraries:
 - NDK side by side (usually added to gitignore for security reasons. Except here)
 
 
-[<img src="Android MVVM.svg">]()
+[<img src="AndroidMVVM.svg">]()
 
 
 
