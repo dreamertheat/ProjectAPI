@@ -30,7 +30,8 @@ Libraries:
 
 
 
-## Diagran I made to explain high to low level view of MVVM clean architecture
+#### MVVM clean architecture diagram
+###### Diagram i constructed to explain the layers of clean architecture and how it applies to MVVM
 (click image for zoomed view)
 
 ![](https://raw.githubusercontent.com/dreamertheat/ProjectAPI/master/diagram/AndroidMVVM.svg?sanitize=true)
