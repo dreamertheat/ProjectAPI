@@ -28,7 +28,7 @@ Libraries:
 - NDK side by side (usually added to gitignore for security reasons. Except here)
 
 
-[<img src="https://raw.githubusercontent.com/NNTin/test/master/test/animateddiscord.svg">]()
+[<img src="Android MVVM.svg">]()
 
 
 
