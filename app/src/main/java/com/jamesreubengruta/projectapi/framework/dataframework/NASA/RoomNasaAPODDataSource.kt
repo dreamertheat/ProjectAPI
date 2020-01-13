@@ -1,10 +1,10 @@
-package com.jamesreubengruta.projectapi.framework.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.NASA
 
 import android.content.Context
 import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODDataSource
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
-import com.jamesreubengruta.projectapi.framework.db.NASA.NasaAPODEntity
-import com.jamesreubengruta.projectapi.framework.db.ProjectAPIDatabase
+import com.jamesreubengruta.projectapi.framework.dataframework.db.NASA.NasaAPODEntity
+import com.jamesreubengruta.projectapi.framework.dataframework.db.ProjectAPIDatabase
 
 class RoomNasaAPODDataSource(context: Context) :NasaAPODDataSource {
 

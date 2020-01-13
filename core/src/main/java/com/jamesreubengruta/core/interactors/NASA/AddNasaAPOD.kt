@@ -1,4 +1,4 @@
-package com.jamesreubengruta.core.interactors
+package com.jamesreubengruta.core.interactors.NASA
 
 import com.jamesreubengruta.core.data.repositories.NasaRepository
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel

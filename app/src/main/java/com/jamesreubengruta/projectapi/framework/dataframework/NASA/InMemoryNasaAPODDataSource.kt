@@ -1,4 +1,4 @@
-package com.jamesreubengruta.projectapi.framework.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.NASA
 
 import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODOpenDataSource
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel

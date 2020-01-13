@@ -1,4 +1,4 @@
-package com.jamesreubengruta.projectapi.framework.db.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.db.NASA
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
