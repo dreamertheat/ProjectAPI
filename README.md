@@ -20,7 +20,7 @@ Libraries:
 - RxJava
 - NDK side by side (usually added to gitignore for security reasons. Except here)
 
-```HTML
+
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=5,IE=9" ><![endif]-->
 <!DOCTYPE html>
 <html>
@@ -35,6 +35,6 @@ Libraries:
 
 
 
-```
+
 
 
