@@ -29,7 +29,9 @@ Libraries:
 
 
 [<img src="diagram/AndroidMVVM.svg">]()
-![](https://raw.githubusercontent.com/dreamertheat/ProjectAPI/master/diagram/AndroidMVVM.svghttps://cdn.rawgit.com/NNTin/test/fbe3b4e3/test/animateddiscord.svg)
+
+
+[<img src="https://raw.githubusercontent.com/dreamertheat/ProjectAPI/master/diagram/AndroidMVVM.svg">]()
 
 
 
