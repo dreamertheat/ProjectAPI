@@ -68,11 +68,17 @@ dependencies {
 
     // Test helpers
     testImplementation "androidx.room:room-testing:$room_version"
-    testImplementation 'org.mockito:mockito-core:1.10.19'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
+    //mockito
+
+    // Optional -- Mockito framework
+    testImplementation 'org.mockito:mockito-core:3.2.4'
+
+    testImplementation 'org.mockito:mockito-android:3.2.4'// (replace androidTestImplementation with testImplementation)
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0"
     // Core library
     androidTestImplementation 'androidx.test:core:1.0.0'
 
@@ -92,6 +98,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.0'
     androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.0'
+
+
 
     // The following Espresso dependency can be either "implementation"
     // or "androidTestImplementation", depending on whether you want the

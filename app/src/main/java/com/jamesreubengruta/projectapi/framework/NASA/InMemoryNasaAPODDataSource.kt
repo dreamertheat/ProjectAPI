@@ -10,6 +10,7 @@ class InMemoryOpenNasaAPODDataSource :
 
     override fun set(data: NasaAPODModel) {
         apod = data
+
     }
 
     override fun get(): NasaAPODModel  = apod
