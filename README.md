@@ -28,7 +28,7 @@ Libraries:
 - NDK side by side (usually added to gitignore for security reasons. Except here)
 
 
-[<img src="https://cdn.rawgit.com/NNTin/test/fbe3b4e3/test/animateddiscord.svg">]()
+[<img src="https://raw.githubusercontent.com/NNTin/test/master/test/animateddiscord.svg">]()
 
 
 
