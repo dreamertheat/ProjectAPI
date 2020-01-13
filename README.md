@@ -30,7 +30,7 @@ Libraries:
 
 
 
-#### MVVM clean architecture diagram
+## MVVM clean architecture diagram
 ###### Diagram i constructed to explain the layers of clean architecture and how it applies to MVVM
 (click image for zoomed view)
 
