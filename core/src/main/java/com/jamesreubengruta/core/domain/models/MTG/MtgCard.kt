@@ -2,6 +2,8 @@ package com.jamesreubengruta.core.domain.models.MTG
 
 
 import com.google.gson.annotations.SerializedName
+import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
+import java.io.Serializable
 
 data class MtgCard(
     var cards: List<Card?>?
@@ -39,7 +41,7 @@ data class MtgCard(
         var type: String?, // Creature — Sliver
         var types: List<String?>?,
         var watermark: String? // set (M14)
-    ) {
+    ) : Serializable {
         data class Legality(
             var format: String?, // Vintage
             var legality: String? // Legal
@@ -49,5 +51,7 @@ data class MtgCard(
             var date: String?, // 2013-07-01
             var text: String? // Abilities that Slivers grant, as well as power/toughness boosts, are cumulative. However, for some abilities, like flying, having more than one instance of the ability doesn’t provide any additional benefit.
         )
+
+
     }
 }

@@ -1,7 +1,7 @@
 package com.jamesreubengruta.core.data.repositories
 
-import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
-class MasterRepository private constructor(private val nasaREPO : NasaRepository){
+class MasterRepository private constructor(private val nasaREPO : NasaRepository,
+                                           private val mtgRepository: MTGRepository){
 
 
 
@@ -12,10 +12,10 @@ class MasterRepository private constructor(private val nasaREPO : NasaRepository
         var master_repo : MasterRepository?=null
 
 
-        fun getInstance(nasaREPO : NasaRepository)=
+        fun getInstance(nasaREPO : NasaRepository, mtgRepository: MTGRepository)=
             //if  master_repo is null, instantiate
             master_repo ?: synchronized(this){
-                master_repo ?: MasterRepository(nasaREPO).apply { master_repo = this }
+                master_repo ?: MasterRepository(nasaREPO, mtgRepository).apply { master_repo = this }
             }
 
 
