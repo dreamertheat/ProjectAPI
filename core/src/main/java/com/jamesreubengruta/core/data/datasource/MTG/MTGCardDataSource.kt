@@ -4,7 +4,7 @@ import com.jamesreubengruta.core.domain.models.MTG.MtgCard
 
 interface MTGCardDataSource{
 
-    fun getList() : List<MtgCard>
-    fun add(card : MtgCard)
+    suspend fun getList() : List<MtgCard>
+    suspend fun add(card : MtgCard)
 
 }

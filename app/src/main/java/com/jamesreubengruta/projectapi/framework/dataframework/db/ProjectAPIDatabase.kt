@@ -4,12 +4,14 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.jamesreubengruta.projectapi.framework.dataframework.db.MTG.MTGCardDAO
+import com.jamesreubengruta.projectapi.framework.dataframework.db.MTG.MTGCardEntity
 import com.jamesreubengruta.projectapi.framework.dataframework.db.NASA.NasaAPODDAO
 import com.jamesreubengruta.projectapi.framework.dataframework.db.NASA.NasaAPODEntity
 
 
 @Database(
-    entities = [NasaAPODEntity::class],
+    entities = [NasaAPODEntity::class, MTGCardEntity::class],
     version = 1,
     exportSchema = false
 )
@@ -33,6 +35,6 @@ abstract class ProjectAPIDatabase : RoomDatabase() {
     }
 
     abstract fun nasaAPODDAO(): NasaAPODDAO
-
+    abstract fun mtgDAO(): MTGCardDAO
 
 }
