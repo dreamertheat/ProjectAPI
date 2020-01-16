@@ -11,7 +11,7 @@ import com.jamesreubengruta.projectapi.framework.dataframework.NASA.RoomNasaAPOD
 class MasterApplication() : Application() {
 
     val mas = MasterRepository.getInstance(NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource() ),
-        MTGRepository(InMemoryMTGDataSource(),InMemoryMTGDataSource()))
+        MTGRepository(RoomMTGDataSource(),InMemoryMTGDataSource()))
 
     override fun onCreate() {
         super.onCreate()

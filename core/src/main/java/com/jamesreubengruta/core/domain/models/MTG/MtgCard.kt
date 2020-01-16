@@ -32,7 +32,7 @@ data class MtgCard(
         var printings: List<String?>?,
         var rarity: String?, // Rare
         var rulings: List<Ruling?>?,
-        var `set`: String?, // PRM
+        var set: String?, // PRM
         var setName: String?, // Magic Online Promos
         var subtypes: List<String?>?,
         var supertypes: List<Any?>?,
@@ -51,7 +51,6 @@ data class MtgCard(
             var date: String?, // 2013-07-01
             var text: String? // Abilities that Slivers grant, as well as power/toughness boosts, are cumulative. However, for some abilities, like flying, having more than one instance of the ability doesn’t provide any additional benefit.
         )
-
 
     }
 }
