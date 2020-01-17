@@ -1,17 +1,14 @@
 package com.jamesreubengruta.projectapi.presentation.activities.login_profile
 
-import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.projectapi.R
-import com.jamesreubengruta.projectapi.presentation.fragments.FragmentHelp
 import com.jamesreubengruta.projectapi.presentation.fragments.FragmentLogin
 import com.jamesreubengruta.projectapi.presentation.fragments.FragmentProfile
-import com.jamesreubengruta.projectapi.presentation.fragments.FragmentSettings
-import com.jamesreubengruta.projectapi.presentation.logic.LoginProfileX
+import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileX
 import com.jamesreubengruta.projectapi.presentation.viewmodels.LoginProfileVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.LoginProfileVMF
 
@@ -24,6 +21,7 @@ class LoginProfile : AppCompatActivity(), View.OnClickListener, LoginProfileX {
     }
 
     override fun onClick(v: View?) {
+
     }
 
     override fun onCreate(sis: Bundle?) {
@@ -34,6 +32,7 @@ class LoginProfile : AppCompatActivity(), View.OnClickListener, LoginProfileX {
         val vmf = LoginProfileVMF(application,this)
         vm = ViewModelProvider(this, vmf).get(LoginProfileVM::class.java)
 
+        //default fragment
         setUpView(FragmentLogin(this))
 
     }

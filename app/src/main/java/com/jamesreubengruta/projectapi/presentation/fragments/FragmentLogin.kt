@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.projectapi.R
-import com.jamesreubengruta.projectapi.presentation.logic.LoginProfileX
+import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileX
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
 import kotlinx.android.synthetic.main.fragment_login.*

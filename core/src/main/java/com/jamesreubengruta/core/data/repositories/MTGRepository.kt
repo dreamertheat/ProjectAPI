@@ -6,8 +6,8 @@ import com.jamesreubengruta.core.domain.models.MTG.MtgCard
 
 class MTGRepository(val mtgds: MTGCardDataSource, val mtgods: MTGCardOpenDatasource){
 
-    fun getCardList() = mtgds.getList()
-    fun addCard(card : MtgCard) = mtgds.add(card)
+    suspend fun getCardList() = mtgds.getList()
+    suspend fun addCard(card : MtgCard) = mtgds.add(card)
     fun getCard() = mtgods.get()
     fun setCard(card : MtgCard) = mtgods.set(card)
 
