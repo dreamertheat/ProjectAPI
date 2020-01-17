@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-open class MasterViewModelFactory() : ViewModelProvider.Factory{
+open class MasterViewModelFactory : ViewModelProvider.Factory{
     private lateinit var app : Application
     private lateinit var interactors: Interactors
 

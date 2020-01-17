@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.projectapi.R
-import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileX
+import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileDelegate
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
 import kotlinx.android.synthetic.main.fragment_login.*
 
-class FragmentLogin(private val lpx : LoginProfileX) : Fragment(), View.OnClickListener {
+class FragmentLogin(private val lpx : LoginProfileDelegate) : Fragment(), View.OnClickListener {
 
     private lateinit var vm : FragmentLoginVM
 

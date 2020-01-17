@@ -4,9 +4,9 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileX
+import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileDelegate
 
-class FragmentLoginVM(var c : android.app.Application, val lpx : LoginProfileX) : AndroidViewModel(c) {
+class FragmentLoginVM(var c : android.app.Application, val lpx : LoginProfileDelegate) : AndroidViewModel(c) {
 
 
 

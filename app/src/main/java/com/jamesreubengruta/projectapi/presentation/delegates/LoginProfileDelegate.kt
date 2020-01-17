@@ -1,6 +1,6 @@
 package com.jamesreubengruta.projectapi.presentation.delegates
 
-interface LoginProfileX {
+interface LoginProfileDelegate {
 
     fun showFragment();
 }

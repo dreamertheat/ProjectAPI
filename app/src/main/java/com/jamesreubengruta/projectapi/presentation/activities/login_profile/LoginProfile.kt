@@ -8,15 +8,15 @@ import androidx.lifecycle.ViewModelProvider
 import com.jamesreubengruta.projectapi.R
 import com.jamesreubengruta.projectapi.presentation.fragments.FragmentLogin
 import com.jamesreubengruta.projectapi.presentation.fragments.FragmentProfile
-import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileX
+import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileDelegate
 import com.jamesreubengruta.projectapi.presentation.viewmodels.LoginProfileVM
 import com.jamesreubengruta.projectapi.presentation.viewmodels.LoginProfileVMF
 
-class LoginProfile : AppCompatActivity(), View.OnClickListener, LoginProfileX {
+class LoginProfile : AppCompatActivity(), View.OnClickListener, LoginProfileDelegate {
 
     private lateinit var vm : LoginProfileVM
 
-    fun getLpx():LoginProfileX{
+    fun getLpx():LoginProfileDelegate{
         return this
     }
 
