@@ -1,7 +1,7 @@
 package com.jamesreubengruta.core.data.repositories
 
-class MasterRepository private constructor(private val nasaREPO : NasaRepository,
-                                           private val mtgRepository: MTGRepository){
+class MasterRepository private constructor( val nasaREPO : NasaRepository,
+                                            val mtgRepository: MTGRepository){
 
 
 
