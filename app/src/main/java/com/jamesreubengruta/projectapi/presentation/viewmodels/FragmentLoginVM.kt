@@ -4,10 +4,11 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.jamesreubengruta.projectapi.framework.di.Interactors
+import com.jamesreubengruta.projectapi.framework.di.MasterViewModel
 import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileDelegate
 
-class FragmentLoginVM(var c : android.app.Application, val lpx : LoginProfileDelegate) : AndroidViewModel(c) {
-
+class FragmentLoginVM(var c : android.app.Application, interactors: Interactors, val lpx : LoginProfileDelegate) : MasterViewModel(c, interactors) {
 
 
     private fun storeCreds(username:String, password: String):ArrayList<String>{

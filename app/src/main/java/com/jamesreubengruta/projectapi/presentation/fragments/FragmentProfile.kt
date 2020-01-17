@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.jamesreubengruta.projectapi.R
+import com.jamesreubengruta.projectapi.framework.di.MasterViewModelFactory
 import com.jamesreubengruta.projectapi.presentation.activities.login_profile.LoginProfile
 import com.jamesreubengruta.projectapi.presentation.adapters.settingsAdapter
 import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVM
-import com.jamesreubengruta.projectapi.presentation.viewmodels.FragmentLoginVMF
 import kotlinx.android.synthetic.main.fragment_profile.*
 
 class FragmentProfile : Fragment() {
@@ -23,13 +23,12 @@ class FragmentProfile : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        val vmf = FragmentLoginVMF(this.activity!!.application,(this.activity as LoginProfile))
-        vm = ViewModelProvider(this.requireActivity(),vmf).get(FragmentLoginVM::class.java)
-        //vm = FragmentLoginVM(this.activity?.application!!,(this.activity as LoginProfile).getLpx())
+        //val vmf = FragmentLoginVMF(this.activity!!.application,(this.activity as LoginProfile))
+        vm = ViewModelProvider(this.requireActivity(), MasterViewModelFactory()).get(FragmentLoginVM::class.java)
         vm.getCreds().observe(this, Observer{ c->
             var temp : String = ""
             c.forEach {
-                temp+=it
+                temp+=it //
             }
             tv_message.text = temp
         } )
