@@ -7,7 +7,8 @@ class MasterRepository private constructor( val nasaREPO : NasaRepository,
 
 
 
-    companion object{
+    companion object {
+
         @Volatile
         var master_repo : MasterRepository?=null
 
@@ -16,7 +17,7 @@ class MasterRepository private constructor( val nasaREPO : NasaRepository,
             //if  master_repo is null, instantiate
             master_repo ?: synchronized(this){
                 master_repo ?: MasterRepository(nasaREPO, mtgRepository).apply { master_repo = this }
-            }
+        }
 
 
     }

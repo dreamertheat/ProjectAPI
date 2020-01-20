@@ -4,19 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.jamesreubengruta.projectapi.framework.dataframework.db.MTG.MTGCardDAO
-import com.jamesreubengruta.projectapi.framework.dataframework.db.MTG.MTGCardEntity
-import com.jamesreubengruta.projectapi.framework.dataframework.db.NASA.NasaAPODDAO
-import com.jamesreubengruta.projectapi.framework.dataframework.db.NASA.NasaAPODEntity
+import com.jamesreubengruta.projectapi.framework.dataframework.db.mtg.MTGCardDAO
+import com.jamesreubengruta.projectapi.framework.dataframework.db.mtg.MTGCardEntity
+import com.jamesreubengruta.projectapi.framework.dataframework.db.nasa.NasaAPODDAO
+import com.jamesreubengruta.projectapi.framework.dataframework.db.nasa.NasaAPODEntity
 
 
 @Database(
     entities = [NasaAPODEntity::class, MTGCardEntity::class],
     version = 1,
     exportSchema = false
-)
-
-abstract class ProjectAPIDatabase : RoomDatabase() {
+)abstract class ProjectAPIDatabase : RoomDatabase() {
 
     companion object {
 
@@ -25,13 +23,20 @@ abstract class ProjectAPIDatabase : RoomDatabase() {
         private var instance: ProjectAPIDatabase? = null
 
         private fun create(context: Context): ProjectAPIDatabase =
-            Room.databaseBuilder(context, ProjectAPIDatabase::class.java, DATABASE_NAME)
-                .fallbackToDestructiveMigration()
+            Room.databaseBuilder(context.applicationContext, ProjectAPIDatabase::class.java, DATABASE_NAME)
+                .allowMainThreadQueries()
                 .build()
 
 
         fun getInstance(context: Context): ProjectAPIDatabase =
-            (instance ?: create(context)).also { instance = it }
+            (instance ?: create(context)).also {
+                instance = it
+            }
+
+
+
+        //
+
     }
 
     abstract fun nasaAPODDAO(): NasaAPODDAO

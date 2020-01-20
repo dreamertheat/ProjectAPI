@@ -1,21 +1,22 @@
-package com.jamesreubengruta.projectapi.framework.dataframework.db.MTG
+package com.jamesreubengruta.projectapi.framework.dataframework.db
 
 import androidx.room.*
 import com.jamesreubengruta.core.domain.models.MTG.MtgCard
-
+import com.jamesreubengruta.projectapi.framework.dataframework.db.mtg.MTGCardEntity
 
 
 @Dao
-interface MTGCardDAO{
+open interface BaseDAO<T>{
 
-    @Query("select * from MTGCards ")
-    suspend fun getCards() : List<MtgCard>
-    @Insert
-    suspend fun addCard(card : MtgCard)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+      suspend fun add(vararg name : T)
+
     @Delete
-    suspend fun deleteCard(id : String)
-    @Query("select * from MTGCards where name like '%:name%'")
-    suspend fun getCard(name : String) : MtgCard
+      suspend fun delete(vararg name : T)
+
+    @Update
+      suspend fun update(vararg name : T)
 
 }
 

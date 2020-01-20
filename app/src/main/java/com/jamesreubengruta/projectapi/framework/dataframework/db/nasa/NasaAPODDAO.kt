@@ -1,4 +1,4 @@
-package com.jamesreubengruta.projectapi.framework.dataframework.db.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.db.nasa
 
 import androidx.room.Dao
 import androidx.room.Delete
@@ -22,5 +22,5 @@ interface NasaAPODDAO {
     suspend fun getAPODList(): List<NasaAPODEntity>
 
     @Delete
-    suspend fun removeAPOD(_id: Int)
+    suspend fun removeAPOD(apod: NasaAPODEntity)
 }

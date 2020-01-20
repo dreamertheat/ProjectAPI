@@ -7,11 +7,11 @@ import com.jamesreubengruta.projectapi.framework.dataframework.db.ProjectAPIData
 
 class RoomMTGDataSource(context : Context) : MTGCardDataSource{
     private val dao = ProjectAPIDatabase.getInstance(context).mtgDAO()
-    override suspend fun getList(): List<MtgCard> {
-        return dao.getCards()
+    override suspend fun getList(name : String): List<MtgCard> {
+        return dao.getList(name)
     }
 
     override suspend fun add(card: MtgCard) {
-        dao.addCard(card)
+        dao.add(card)
     }
 }

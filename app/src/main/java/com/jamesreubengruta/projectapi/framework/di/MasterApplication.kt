@@ -16,22 +16,29 @@ import com.jamesreubengruta.projectapi.framework.dataframework.MTG.RoomMTGDataSo
 import com.jamesreubengruta.projectapi.framework.dataframework.NASA.InMemoryOpenNasaAPODDataSource
 import com.jamesreubengruta.projectapi.framework.dataframework.NASA.RoomNasaAPODDataSource
 
+
 class MasterApplication() : Application() {
     //
-    val mas = MasterRepository.getInstance(NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource() ),
-        MTGRepository(RoomMTGDataSource(this),InMemoryMTGDataSource()))
+//    val mas = MasterRepository.getInstance(NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource() ),
+    //    MTGRepository(RoomMTGDataSource(this),InMemoryMTGDataSource()))
 
     override fun onCreate() {
         super.onCreate()
 
+        /*val mas = MasterRepository.getInstance(NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource() ),
+        MTGRepository(RoomMTGDataSource(this),InMemoryMTGDataSource()))*/
+        
+        val mas_nasaREPO =NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource())
+        val mas_mtgRepository = MTGRepository(RoomMTGDataSource(this),InMemoryMTGDataSource())
+
         MasterViewModelFactory().injector(this,
-            Interactors(MTGaddCard(mas.mtgRepository),
-            MTGgetCard(mas.mtgRepository),
-            MTGgetCardList(mas.mtgRepository),
-            MTGsetCard(mas.mtgRepository),
-            AddNasaAPOD(mas.nasaREPO),
-            GetNasaAPODList(mas.nasaREPO),
-            GetLatestNasaAPOD(mas.nasaREPO)
+            Interactors(MTGaddCard(mas_mtgRepository),
+            MTGgetCard(mas_mtgRepository),
+            MTGgetCardList(mas_mtgRepository),
+            MTGsetCard(mas_mtgRepository),
+            AddNasaAPOD(mas_nasaREPO),
+            GetNasaAPODList(mas_nasaREPO),
+            GetLatestNasaAPOD(mas_nasaREPO)
            )
 
 
