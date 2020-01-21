@@ -1,9 +1,7 @@
-package com.jamesreubengruta.projectapi.framework.dataframework.MTG
+package com.jamesreubengruta.projectapi.framework.dataframework.mtg
 
-import com.jamesreubengruta.core.data.datasource.MTG.MTGCardOpenDatasource
-import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODOpenDataSource
+import com.jamesreubengruta.core.data.datasource.mtg.MTGCardOpenDatasource
 import com.jamesreubengruta.core.domain.models.MTG.MtgCard
-import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 
 class InMemoryMTGDataSource :
     MTGCardOpenDatasource {

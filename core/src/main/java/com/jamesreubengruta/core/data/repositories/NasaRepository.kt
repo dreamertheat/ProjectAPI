@@ -1,7 +1,7 @@
 package com.jamesreubengruta.core.data.repositories
 
-import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODDataSource
-import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODOpenDataSource
+import com.jamesreubengruta.core.data.datasource.nasa.NasaAPODDataSource
+import com.jamesreubengruta.core.data.datasource.nasa.NasaAPODOpenDataSource
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 
 class NasaRepository(private val dataSource : NasaAPODDataSource, private val openData : NasaAPODOpenDataSource){

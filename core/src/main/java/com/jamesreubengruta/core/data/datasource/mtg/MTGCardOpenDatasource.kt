@@ -1,4 +1,4 @@
-package com.jamesreubengruta.core.data.datasource.MTG
+package com.jamesreubengruta.core.data.datasource.mtg
 
 import com.jamesreubengruta.core.domain.models.MTG.MtgCard
 

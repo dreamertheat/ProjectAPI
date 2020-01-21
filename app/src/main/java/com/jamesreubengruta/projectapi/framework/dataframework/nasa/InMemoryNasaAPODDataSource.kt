@@ -1,6 +1,6 @@
-package com.jamesreubengruta.projectapi.framework.dataframework.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.nasa
 
-import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODOpenDataSource
+import com.jamesreubengruta.core.data.datasource.nasa.NasaAPODOpenDataSource
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 
 class InMemoryOpenNasaAPODDataSource :

@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "MTGCards")
 data class MTGCardEntity(
-    @PrimaryKey(autoGenerate = true )val _id : Int?,
+    @PrimaryKey(autoGenerate = true )val uid : Int?,
     @ColumnInfo(name = "id") val id : String?,
     @ColumnInfo(name = "artist") val artist : String?,
 
@@ -21,8 +21,4 @@ data class MTGCardEntity(
     @ColumnInfo(name = "type") val type : String?,
 
     @ColumnInfo(name = "imageUrl") val imageUrl : String?
-    ){
-
-
-
-}
+    )

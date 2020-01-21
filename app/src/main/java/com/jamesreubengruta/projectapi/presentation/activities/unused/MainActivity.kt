@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
     fun handleUI(){
         tv_greet.setOnClickListener {
-            temp_obj = NasaAPODModel(title="mardok",url="mpme",explanation = "asd",copyright = "asda",
+            temp_obj = NasaAPODModel(title="mardok", uid=22,url="mpme",explanation = "asd",copyright = "asda",
                 date = "asd sa", hdurl = "asd 220", mediaType = "as aasd", serviceVersion = "22")
             Log.e("SAVED","SAVED");
             val x = temp_obj;

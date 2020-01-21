@@ -3,7 +3,7 @@ package com.jamesreubengruta.core.domain.models.MTG
 
 
 data class MtgCard(
-        var _id : Int?,
+        var uid : Int?,
         var artist: String?, // Lucas Graciano
         //var cmc: Int?, // 6
         //var colorIdentity: List<String?>?,

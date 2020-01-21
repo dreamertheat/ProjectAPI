@@ -2,7 +2,6 @@ package com.jamesreubengruta.projectapi.framework.dataframework.db.mtg
 
 import androidx.room.*
 import com.jamesreubengruta.core.domain.models.MTG.MtgCard
-import com.jamesreubengruta.projectapi.framework.dataframework.db.BaseDAO
 
 
 @Dao
@@ -12,13 +11,13 @@ abstract class MTGCardDAO {
     abstract suspend fun getList(name: String?): List<MtgCard>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    abstract suspend fun add( name : String)
+    abstract suspend fun add(uid : MTGCardEntity )
 
     @Delete
-    abstract suspend fun delete( name : String)
+    abstract suspend fun delete(uid : MTGCardEntity)
 
     @Update
-    abstract suspend fun update( name : String)
+    abstract suspend fun update(uid : MTGCardEntity )
 
 
 }

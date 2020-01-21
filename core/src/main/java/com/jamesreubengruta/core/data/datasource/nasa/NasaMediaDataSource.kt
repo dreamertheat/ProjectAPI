@@ -1,6 +1,5 @@
-package com.jamesreubengruta.core.data.datasource.NASA
+package com.jamesreubengruta.core.data.datasource.nasa
 
-import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 import com.jamesreubengruta.core.domain.models.NASA.NasaMediaModel
 
 interface NasaMediaDataSource {

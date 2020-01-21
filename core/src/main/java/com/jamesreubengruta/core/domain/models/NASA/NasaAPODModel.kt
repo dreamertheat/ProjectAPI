@@ -7,6 +7,8 @@ import java.io.Serializable
 data class NasaAPODModel(
     @SerializedName("copyright")
     var copyright: String?, // Egon Filter
+    @SerializedName("uid")
+    var uid: Int?, // Egon Filter
     @SerializedName("date")
     var date: String?, // 2019-12-10
     @SerializedName("explanation")
@@ -24,7 +26,7 @@ data class NasaAPODModel(
 ): Serializable{
 
     companion object{
-        val EMPTY = NasaAPODModel("","","","","","","","")
+        val EMPTY = NasaAPODModel("",0,"","","","","","","")
     }
 
 }

@@ -1,7 +1,7 @@
-package com.jamesreubengruta.projectapi.framework.dataframework.NASA
+package com.jamesreubengruta.projectapi.framework.dataframework.nasa
 
 import android.content.Context
-import com.jamesreubengruta.core.data.datasource.NASA.NasaAPODDataSource
+import com.jamesreubengruta.core.data.datasource.nasa.NasaAPODDataSource
 import com.jamesreubengruta.core.domain.models.NASA.NasaAPODModel
 import com.jamesreubengruta.projectapi.framework.dataframework.db.nasa.NasaAPODEntity
 import com.jamesreubengruta.projectapi.framework.dataframework.db.ProjectAPIDatabase
@@ -17,19 +17,20 @@ class RoomNasaAPODDataSource(context: Context) :NasaAPODDataSource {
 
     override suspend fun getLatest(date: String): NasaAPODModel =
         dao.getAPODLatest().let { d->
-            NasaAPODModel(d.copyright,d.date,d.explanation,d.hd_url,d.media_type,d.service_version,
+            NasaAPODModel(d.copyright,d.uid,d.date,d.explanation,d.hd_url,d.media_type,d.service_version,
                 d.title, d.url )
     }
 
 
     override suspend fun getList(): List<NasaAPODModel> =
         dao.getAPODList().map { d->
-            NasaAPODModel(d.copyright,d.date,d.explanation,d.hd_url,d.media_type,d.service_version,
+            NasaAPODModel(d.copyright,d.uid,d.date,d.explanation,d.hd_url,d.media_type,d.service_version,
                d.title, d.url )
     }
 
 
-    override suspend fun remove(_id : Int) {
-        dao.removeAPOD(_id)
+    override suspend fun remove(mod : NasaAPODModel) {
+        dao.removeAPOD(NasaAPODEntity(mod.uid,mod.copyright,mod.date,mod.explanation,mod.mediaType,mod.serviceVersion,
+            mod.title,mod.url,mod.hdurl))
     }
 }
