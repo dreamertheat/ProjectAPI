@@ -30,7 +30,7 @@ class MasterApplication() : Application() {
         val mas_nasaREPO =NasaRepository(RoomNasaAPODDataSource(this),InMemoryOpenNasaAPODDataSource())
         val mas_mtgRepository = MTGRepository(RoomMTGDataSource(this),InMemoryMTGDataSource())
 
-        MasterViewModelFactory().injector(this,
+        MasterViewModelFactory.injector(this,
             Interactors(MTGaddCard(mas_mtgRepository),
             MTGgetCard(mas_mtgRepository),
             MTGgetCardList(mas_mtgRepository),

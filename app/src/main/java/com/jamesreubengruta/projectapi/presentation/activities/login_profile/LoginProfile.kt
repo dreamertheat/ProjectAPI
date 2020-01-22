@@ -32,7 +32,7 @@ class LoginProfile : AppCompatActivity(), View.OnClickListener, LoginProfileDele
 
 
         //val vmf = LoginProfileVMF(application,this)
-        vm = ViewModelProvider(this, MasterViewModelFactory()).get(LoginProfileVM::class.java)
+        //vm = ViewModelProvider(this, MasterViewModelFactory()).get(LoginProfileVM::class.java)
 
         //default fragment
         setUpView(FragmentLogin(this))

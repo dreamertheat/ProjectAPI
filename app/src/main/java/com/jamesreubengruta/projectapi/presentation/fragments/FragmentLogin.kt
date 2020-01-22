@@ -20,7 +20,7 @@ class FragmentLogin(private val lpx : LoginProfileDelegate) : Fragment(), View.O
         super.onActivityCreated(savedInstanceState)
         //vm = ViewModelProvider.AndroidViewModelFactory(this.activity!!.application).create(FragmentLoginVM::class.java)
         //val vmf = FragmentLoginVMF(this.activity!!.application,lpx)
-        vm = ViewModelProvider(this.requireActivity(), MasterViewModelFactory()).get(FragmentLoginVM::class.java)
+        vm = ViewModelProvider(this.requireActivity(), MasterViewModelFactory).get(FragmentLoginVM::class.java)
         bt_login.setOnClickListener(this)
 
 

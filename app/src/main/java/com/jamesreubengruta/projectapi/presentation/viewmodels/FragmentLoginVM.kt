@@ -1,5 +1,6 @@
 package com.jamesreubengruta.projectapi.presentation.viewmodels
 
+import android.app.Activity
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
@@ -8,7 +9,7 @@ import com.jamesreubengruta.projectapi.framework.di.Interactors
 import com.jamesreubengruta.projectapi.framework.di.MasterViewModel
 import com.jamesreubengruta.projectapi.presentation.delegates.LoginProfileDelegate
 
-class FragmentLoginVM(var c : android.app.Application, interactors: Interactors, val lpx : LoginProfileDelegate) : MasterViewModel(c, interactors) {
+class FragmentLoginVM(var c : android.app.Application, interactors: Interactors) : MasterViewModel(c, interactors) {
 
 
     private fun storeCreds(username:String, password: String):ArrayList<String>{
@@ -22,7 +23,7 @@ class FragmentLoginVM(var c : android.app.Application, interactors: Interactors,
 
 
     fun getCreds() : LiveData<ArrayList<String>>{
-        return liveCreds as LiveData<ArrayList<String>>
+        return liveCreds
     }
 
 
@@ -35,7 +36,9 @@ class FragmentLoginVM(var c : android.app.Application, interactors: Interactors,
     private fun goToProfile(username : String, password:String){
         if(username.length>6&&password!=null){
             Log.e("$username is a valid username","$password is a valid password")
-            lpx.showFragment()
+            //lpx.showFragment()
+            val del = c.applicationContext as LoginProfileDelegate
+            del.showFragment()
         }else{
             Log.e("$username is not valid username","$password is a valid password")
         }

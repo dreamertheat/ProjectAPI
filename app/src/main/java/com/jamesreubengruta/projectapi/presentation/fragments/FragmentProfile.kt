@@ -24,7 +24,7 @@ class FragmentProfile : Fragment() {
         super.onActivityCreated(savedInstanceState)
 
         //val vmf = FragmentLoginVMF(this.activity!!.application,(this.activity as LoginProfile))
-        vm = ViewModelProvider(this.requireActivity(), MasterViewModelFactory()).get(FragmentLoginVM::class.java)
+        vm = ViewModelProvider(this.requireActivity(), MasterViewModelFactory).get(FragmentLoginVM::class.java)
         vm.getCreds().observe(this, Observer{ c->
             var temp : String = ""
             c.forEach {

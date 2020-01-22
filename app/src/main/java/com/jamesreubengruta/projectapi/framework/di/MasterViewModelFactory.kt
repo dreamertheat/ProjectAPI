@@ -4,13 +4,13 @@ import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 
-open class MasterViewModelFactory : ViewModelProvider.Factory{
-    private lateinit var app : Application
-    private lateinit var interactors: Interactors
+ object  MasterViewModelFactory : ViewModelProvider.Factory{
+     lateinit var app : Application
+     lateinit var interactors: Interactors
 
-    fun injector(ap : Application, int : Interactors){
-        app = ap
-        interactors = int
+    fun injector(app : Application, interactors : Interactors){
+        MasterViewModelFactory.app = app
+        MasterViewModelFactory.interactors = interactors
     }
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if(MasterViewModel::class.java.isAssignableFrom(modelClass)){
